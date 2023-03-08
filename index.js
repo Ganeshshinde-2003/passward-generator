@@ -13,7 +13,7 @@ const allChechBox = document.querySelector("input[type=checkbox");
 const symbols = "~!@#$%^&*()_+/*[]{}-+<>?/";
 
 let password = "";
-let passwordLength = 8;
+let passwordLength = 18;
 let checkCount = 1;
 handleSlider();
 //set strength circle color to grey
