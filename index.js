@@ -45,3 +45,26 @@ function generateSymbole() {
   const randNum = getRandomint(0, symbols.length);
   return symbols.charAt(randNum);
 }
+function calcStrength() {
+  let hasUpper = flase;
+  let hasLower = flase;
+  let hasNum = flase;
+  let hasSym = flase;
+  if (uppercaseCheck.checked) hasUpper = true;
+  if (lowercaseCheck.checked) hasLower = true;
+  if (numberCheck.checked) hasNum = true;
+  if (symbolsCheck.checked) hasSym = true;
+
+  if (hasLower && hasUpper && (hasNum || hasSym) && password.length >= 8) {
+    setindicator("#0f0");
+    console.log("hiii");
+  } else if (
+    hasLower ||
+    (hasUpper && (hasNum || hasSym) && password.length >= 6)
+  ) {
+    setInterval("#ff0");
+  } else {
+    setindicator("#f00");
+  }
+}
+function copyContent() {}
