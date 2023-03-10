@@ -79,3 +79,54 @@ async function copyContent() {
     copyMsg.classList.remove("active");
   }, 2000);
 }
+
+function handleCheckBoxChange() {
+  checkCount = 0;
+  allChechBox.forEach((checkbox) => {
+    if (checkbox.checked) {
+      checkCount++;
+    }
+    if (passwordLength < checkCount) {
+      passwordLength = checkCount;
+      handleSlider();
+    }
+  });
+}
+
+allChechBox.forEach((checkbox) => {
+  checkbox.addEventListener("change", handleCheckBoxChange);
+});
+
+inputSlider.addEventListener("input", (e) => {
+  passwordLength = e.target.value;
+  handleSlider();
+});
+copyBtn.addEventListener("click", () => {
+  if (passwordDisplay.value) {
+    copyContent();
+  }
+});
+
+generateBtn.addEventListener("click", () => {
+  // none of the checkbox are selected
+  if (checkCount <= 0) return;
+  if (passwordLength < checkCount) {
+    passwordLength = checkCount;
+    handleSlider();
+  }
+
+  password = "";
+
+  if (uppercaseCheck.checked) {
+    password += generateUppercase();
+  }
+  if (lowercaseCheck.checked) {
+    password += generateLowercase();
+  }
+  if (numberCheck.checked) {
+    password += getRandomnumber();
+  }
+  if (symbolsCheck.checked) {
+    password += generateSymbole();
+  }
+});
