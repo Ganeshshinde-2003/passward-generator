@@ -10,7 +10,7 @@ const symbolsCheck = document.querySelector("#symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generator-button");
 const allChechBox = document.querySelector("input[type=checkbox");
-const symbols = "~!@#$%^&*(%`':;)_+/*[]{}-+<>?/";
+const symbols = "~!@#$%^&*(%`':;)_+/*[|]{}-+<>?/";
 
 let password = "";
 let passwordLength = 8;
