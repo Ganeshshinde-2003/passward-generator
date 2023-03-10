@@ -117,16 +117,30 @@ generateBtn.addEventListener("click", () => {
 
   password = "";
 
-  if (uppercaseCheck.checked) {
-    password += generateUppercase();
+  // if (uppercaseCheck.checked) {
+  //   password += generateUppercase();
+  // }
+  // if (lowercaseCheck.checked) {
+  //   password += generateLowercase();
+  // }
+  // if (numberCheck.checked) {
+  //   password += getRandomnumber();
+  // }
+  // if (symbolsCheck.checked) {
+  //   password += generateSymbole();
+  // }
+
+  let funcArr = [];
+  if (uppercaseCheck.checked) funcArr.push(generateUppercase);
+  if (lowercaseCheck.checked) funcArr.push(generatelowercase);
+  if (numberCheck.checked) funcArr.push(getRandomnumber);
+  if (symbolsCheck.checked) funcArr.push(generateSymbole);
+
+  for (let i = 0; i < funcArr.length; i++) {
+    password += funcArr[i]();
   }
-  if (lowercaseCheck.checked) {
-    password += generateLowercase();
-  }
-  if (numberCheck.checked) {
-    password += getRandomnumber();
-  }
-  if (symbolsCheck.checked) {
-    password += generateSymbole();
+  for (let i = 0; i < passwordLength - funcArr.length; i++) {
+    let randIndex = getRandomint(0, funcAr.length);
+    password += funcArr[randIndex]();
   }
 });
