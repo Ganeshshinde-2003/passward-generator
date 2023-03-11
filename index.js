@@ -9,8 +9,11 @@ const numberCheck = document.querySelector("#numbers");
 const symbolsCheck = document.querySelector("#symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generator-button");
-const allChechBox = document.querySelector("input[type=checkbox");
-const symbols = "~!@#$%^&*(%`':;)_+/*[|]{}-+<>?/";
+const allChechBox = document.querySelectorAll("input[type=checkbox");
+const symbols = "~!@#$%^&*(%:;)_+/*[|]{}-+<>?/";
+
+console.log(typeof allChechBox);
+console.log(allChechBox[0]);
 
 let password = "";
 let passwordLength = 8;
@@ -46,10 +49,10 @@ function generateSymbole() {
   return symbols.charAt(randNum);
 }
 function calcStrength() {
-  let hasUpper = flase;
-  let hasLower = flase;
-  let hasNum = flase;
-  let hasSym = flase;
+  let hasUpper = false;
+  let hasLower = false;
+  let hasNum = false;
+  let hasSym = false;
   if (uppercaseCheck.checked) hasUpper = true;
   if (lowercaseCheck.checked) hasLower = true;
   if (numberCheck.checked) hasNum = true;
@@ -93,7 +96,7 @@ function handleCheckBoxChange() {
   });
 }
 
-function shufflePassword(shufflePassword) {
+function shufflePassword(array) {
   //Fisher Yates Method to shuffle
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -102,7 +105,7 @@ function shufflePassword(shufflePassword) {
     array[j] = temp;
   }
   let str = "";
-  array, forEach((el) => (str += el));
+  array.forEach((el) => (str += el));
   return str;
 }
 
@@ -128,6 +131,8 @@ generateBtn.addEventListener("click", () => {
     handleSlider();
   }
 
+  console.log("stating");
+
   password = "";
 
   // if (uppercaseCheck.checked) {
@@ -145,17 +150,19 @@ generateBtn.addEventListener("click", () => {
 
   let funcArr = [];
   if (uppercaseCheck.checked) funcArr.push(generateUppercase);
-  if (lowercaseCheck.checked) funcArr.push(generatelowercase);
+  if (lowercaseCheck.checked) funcArr.push(generateLowercase);
   if (numberCheck.checked) funcArr.push(getRandomnumber);
   if (symbolsCheck.checked) funcArr.push(generateSymbole);
 
   for (let i = 0; i < funcArr.length; i++) {
     password += funcArr[i]();
   }
+  console.log("compulsory done");
   for (let i = 0; i < passwordLength - funcArr.length; i++) {
-    let randIndex = getRandomint(0, funcAr.length);
+    let randIndex = getRandomint(0, funcArr.length);
     password += funcArr[randIndex]();
   }
+  console.log("shuffling");
   password = shufflePassword(Array.from(password));
   passwordDisplay.value = password;
   calcStrength();
