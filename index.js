@@ -12,12 +12,12 @@ const generateBtn = document.querySelector(".generator-button");
 const allChechBox = document.querySelectorAll("input[type=checkbox");
 const symbols = "~!@#$%^&*(%:;)_+/*[|]{}-+<>?/";
 
-console.log(typeof allChechBox);
-console.log(allChechBox[0]);
+// console.log(typeof allChechBox);
+// console.log(allChechBox[0]);
 
 let password = "";
 let passwordLength = 8;
-let checkCount = 1;
+let checkCount = 0;
 handleSlider();
 //set strength circle color to grey
 
@@ -60,12 +60,12 @@ function calcStrength() {
 
   if (hasLower && hasUpper && (hasNum || hasSym) && password.length >= 8) {
     setindicator("#0f0");
-    console.log("hiii");
+    // console.log("hiii");
   } else if (
     hasLower ||
     (hasUpper && (hasNum || hasSym) && password.length >= 6)
   ) {
-    setInterval("#ff0");
+    setindicator("#ff0");
   } else {
     setindicator("#f00");
   }
@@ -122,7 +122,6 @@ copyBtn.addEventListener("click", () => {
     copyContent();
   }
 });
-
 generateBtn.addEventListener("click", () => {
   // none of the checkbox are selected
   if (checkCount <= 0) return;
@@ -131,7 +130,7 @@ generateBtn.addEventListener("click", () => {
     handleSlider();
   }
 
-  console.log("stating");
+  // console.log("stating");
 
   password = "";
 
@@ -157,12 +156,12 @@ generateBtn.addEventListener("click", () => {
   for (let i = 0; i < funcArr.length; i++) {
     password += funcArr[i]();
   }
-  console.log("compulsory done");
+  // console.log("compulsory done");
   for (let i = 0; i < passwordLength - funcArr.length; i++) {
     let randIndex = getRandomint(0, funcArr.length);
     password += funcArr[randIndex]();
   }
-  console.log("shuffling");
+  // console.log("shuffling");
   password = shufflePassword(Array.from(password));
   passwordDisplay.value = password;
   calcStrength();
