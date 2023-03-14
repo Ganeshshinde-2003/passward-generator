@@ -5,7 +5,7 @@ This repository contains a password generator built using JavaScript, HTML, and 
 
 1. Clone the repository to your local machine using the following command:
     
-    git clone https://github.com/yourusername/password-generator.git
+        https://github.com/yourusername/password-generator.git
 
 2. Open the index.html file in your web browser to view the password generator app.
 3. Follow the prompts to customize your password options and generate a strong, secure password. 
