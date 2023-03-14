@@ -10,3 +10,12 @@ This repository contains a password generator built using JavaScript, HTML, and 
 2. Open the index.html file in your web browser to view the password generator app.
 3. Follow the prompts to customize your password options and generate a strong, secure password. 
     
+## 💻 Technologies Used:
+
+- HTML
+- CSS
+- JavaScript
+
+## 🤝 Contributing:
+
+If you would like to contribute to this repository, please fork the project and submit a pull request with your changes. All contributions are welcome.
