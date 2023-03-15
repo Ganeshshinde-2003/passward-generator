@@ -164,5 +164,5 @@ generateBtn.addEventListener("click", () => {
   // console.log("shuffling");
   password = shufflePassword(Array.from(password));
   passwordDisplay.value = password;
-  // calcStrength();
+  calcStrength();
 });
