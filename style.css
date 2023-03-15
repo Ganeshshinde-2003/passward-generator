@@ -32,3 +32,19 @@
     rgba(4, 4, 75, 1) 100%
   );
 }
+h1 {
+  color: var(--pl-white);
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.2;
+}
+.display-container {
+  position: relative;
+  background-color: var(--dk-violet);
+  border-radius: 1rem;
+  border-bottom: 0.35 solid var(--lt-violet2);
+  margin: 1rem 0;
+  padding-top: 0.35rem;
+}
