@@ -62,7 +62,7 @@ h1 {
   letter-spacing: 1px;
   padding-right: 3.25rem;
 }
-.dispaly::placeholder {
+/* .dispaly::placeholder {
   position: absolute;
   top: 50%;
   left: 1.5rem;
@@ -71,8 +71,8 @@ h1 {
   color: var(--vb-yellow);
   opacity: 0.65;
   text-transform: uppercase;
-  /* transform: translateY(-50%); */
-}
+  /* transform: translateY(-50%); 
+} */
 
 .display-container button {
   position: absolute;
