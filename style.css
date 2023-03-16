@@ -80,12 +80,11 @@ h1 {
   right: 1.5rem;
   transform: translateY(-50%);
 }
-/* .input-container {
-  
+.input-container {
   padding: 0.35rem 30px 30px;
   background-color: var(--dk-violet);
-} */
-/* .length-container {
+}
+.length-container {
   display: flex;
   justify-content: space-between;
   color: white;
@@ -93,4 +92,4 @@ h1 {
 .length-container p {
   font-size: 1.5rem;
   line-height: 30px;
-} */
+}
