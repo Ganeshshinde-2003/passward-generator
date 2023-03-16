@@ -41,17 +41,20 @@ h1 {
   line-height: 1.2;
 }
 .display-container {
+  /* display: flex; */
+  padding: 30px;
   position: relative;
   background-color: var(--dk-violet);
   border-radius: 1rem;
-  border-bottom: 0.35 solid var(--lt-violet2);
+  border-bottom: 0.35rem solid var(--lt-violet2);
   margin: 1rem 0;
   padding-top: 0.35rem;
 }
 .dispaly {
   width: 100%;
+  border: none;
   background-color: transparent;
-  padding: 1.25rem 1 rem;
+  padding: 1.25rem 1rem;
   color: var(--vb-yellow);
   font-weight: 600;
   font-size: 1.5rem;
@@ -59,3 +62,35 @@ h1 {
   letter-spacing: 1px;
   padding-right: 3.25rem;
 }
+.dispaly::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: var(--vb-yellow);
+  opacity: 0.65;
+  text-transform: uppercase;
+  /* transform: translateY(-50%); */
+}
+
+.display-container button {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+/* .input-container {
+  
+  padding: 0.35rem 30px 30px;
+  background-color: var(--dk-violet);
+} */
+/* .length-container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.length-container p {
+  font-size: 1.5rem;
+  line-height: 30px;
+} */
