@@ -48,3 +48,14 @@ h1 {
   margin: 1rem 0;
   padding-top: 0.35rem;
 }
+.dispaly {
+  width: 100%;
+  background-color: transparent;
+  padding: 1.25rem 1 rem;
+  color: var(--vb-yellow);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding-right: 3.25rem;
+}
