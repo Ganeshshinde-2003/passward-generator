@@ -81,15 +81,32 @@ h1 {
   transform: translateY(-50%);
 }
 .input-container {
-  padding: 0.35rem 30px 30px;
+  padding: 2rem;
   background-color: var(--dk-violet);
+  min-width: 28.5rem;
+  border-radius: 1rem;
 }
 .length-container {
   display: flex;
   justify-content: space-between;
   color: white;
+  align-items: center;
 }
 .length-container p {
   font-size: 1.5rem;
   line-height: 30px;
+}
+.length-container > :nth-child(2) {
+  color: var(--vb-yellow);
+}
+.slider::-webkit-slider-thumb {
+  background-color: var(--vb-yellow);
+}
+.strength-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
 }
