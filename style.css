@@ -133,3 +133,33 @@ h1 {
   font-size: 1.25rem;
   cursor: pointer;
 }
+.check {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 0 1rem;
+  color: white;
+}
+.check input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--vb-cyan);
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.35rem;
+}
+
+.check input:checked {
+  background-color: var(--vb-cyan);
+}
+.check input:checked::before {
+  content: "✔";
+  position: absolute;
+  color: var(--dk-text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  left: 50%;
+  top: -3.5px;
+  transform: translateX(-50%) translateY(2%);
+}
