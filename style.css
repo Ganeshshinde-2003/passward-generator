@@ -85,6 +85,7 @@ h1 {
   background-color: var(--dk-violet);
   min-width: 28.5rem;
   border-radius: 1rem;
+  border-bottom: 0.35rem solid var(--lt-violet2);
 }
 .length-container {
   display: flex;
@@ -117,4 +118,18 @@ h1 {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
+}
+.generator-button {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--vb-violet);
+  text-align: center;
+  border-radius: 0.75rem;
+  border-bottom: 0.35rem solid var(--vb-yellow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--vb-yellow);
+  font-weight: 600;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
