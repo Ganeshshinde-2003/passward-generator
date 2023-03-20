@@ -42,7 +42,7 @@ h1 {
 }
 .display-container {
   /* display: flex; */
-  padding: 30px;
+  padding: 25px;
   position: relative;
   background-color: var(--dk-violet);
   border-radius: 1rem;
@@ -242,4 +242,14 @@ h1 {
   outline: 2px solid var(--vb-yellow);
   background-color: var(--dk-violet);
   box-shadow: 0px 0px 25px 5px rgba(255, 229 61, 0.8);
+}
+@media (max-width: 460px) {
+  .input-container {
+    min-width: 21rem;
+  }
+}
+@media (max-width: 300px) {
+  .input-container {
+    min-width: 14rem;
+  }
 }
