@@ -10,7 +10,7 @@ const symbolsCheck = document.querySelector("#symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generator-button");
 const allChechBox = document.querySelectorAll("input[type=checkbox");
-const symbols = "~!@#$%^&*(%:;)_+/*[|]{}-+<>?/";
+const symbols = "~!@#$%^&*(%:;)+/*-+?";
 
 // console.log(typeof allChechBox);
 // console.log(allChechBox[0]);
@@ -27,10 +27,15 @@ setindicator("#ccc");
 function handleSlider() {
   inputSlider.value = passwordLength;
   lengthDisplay.innerHTML = inputSlider.value;
+  const min = inputSlider.min;
+  const max = inputSlider.max;
+  inputSlider.style.backgroundSize =
+    ((passwordLength - min) * 100) / (max - min) + "% 100%";
 }
 
 function setindicator(color) {
   indicator.style.backgroundColor = color;
+  indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 function getRandomint(min, max) {
@@ -131,22 +136,7 @@ generateBtn.addEventListener("click", () => {
     handleSlider();
   }
 
-  // console.log("stating");
-
   password = "";
-
-  // if (uppercaseCheck.checked) {
-  //   password += generateUppercase();
-  // }
-  // if (lowercaseCheck.checked) {
-  //   password += generateLowercase();
-  // }
-  // if (numberCheck.checked) {
-  //   password += getRandomnumber();
-  // }
-  // if (symbolsCheck.checked) {
-  //   password += generateSymbole();
-  // }
 
   let funcArr = [];
   if (uppercaseCheck.checked) funcArr.push(generateUppercase);
